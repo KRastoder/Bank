@@ -4,25 +4,46 @@ A Django-based banking application.
 
 ## Setup
 
-1. Clone the repository
-2. Create a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -e .
-   ```
-4. Run migrations:
-   ```bash
-   python manage.py migrate
-   ```
-5. Start the development server:
-   ```bash
-   python manage.py runserver
-   ```
+### 1. Clone the repository
+
+### 2. Create a virtual environment
+
+**Windows (PowerShell):**
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+**macOS/Linux:**
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+> **Windows note:** If activation is blocked, run this first:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+> ```
+
+### 3. Install dependencies
+
+```bash
+pip install -e .
+```
+
+### 4. Run migrations
+
+```bash
+python manage.py migrate
+```
+
+### 5. Start the development server
+
+```bash
+python manage.py runserver
+```
 
 ## Project Structure
 
+- `config/` — Django project settings
 - `bank/` — Main Django application
