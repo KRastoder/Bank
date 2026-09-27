@@ -1,0 +1,24 @@
+
+User: 
+	UUID PK id
+	CHARFIELD email 
+	CHARFIELD password  OVO DA HASHUJEMO
+
+Account :
+	INT AUTOINCREMENT PK ID 
+	INT FK userId 
+	Float Balance 
+	Pin 	-Ovo neka bude bude random 4 broja koje ima da unesemo u bazi kada koristnik napravi acc
+
+Payments : 
+	PK Id 
+	FK ACCOUNT_ID LikStoPlaca
+	FK ACCOUNT_ID LikuKojiStize 
+	INT Ammont 
+	
+
+Sta zelimo da napravimo? 
+Bukv kao ATM .
+Koristnik uplati na account stize nam to u bazi bilo to u svoj da doda ili u neci moramo da odvojimo lokigu
+Takodje za pristup uplate trebace da se salje pin Vrv i njega ima da hashujemo 
+
