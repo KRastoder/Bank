@@ -22,3 +22,40 @@ Bukv kao ATM .
 Koristnik uplati na account stize nam to u bazi bilo to u svoj da doda ili u neci moramo da odvojimo lokigu
 Takodje za pristup uplate trebace da se salje pin Vrv i njega ima da hashujemo 
 
+
+//Teorija sta bi otp trebao da znas
+Kako backend funkcionise? 
+
+Ide prvo request bio to client ili bilo sta salje HTTP REQUEST
+
+Tipovi HTTP REQUESTOVA :
+GET inace prazan samo salje na endpoint npr youtube/tvoj-kanal dobijas informacije o tvom kanalu 
+POST je bukv za postavljanje podataka ili ti CREATE client salje serveru neke podatke ako su validni onda ih napravi
+PUT je buk update 
+DELETE je logicno
+
+POST primiremer za Payments:
+{
+	"LikStoPlacaID": 67
+	"LikuKojiStizeID" : 69
+	"Ammount" : 1000
+}
+PUT zamisli slican json samo sto npr salje novi password i njegov uuid 
+
+Okej znamo sta je http i koje metode oni imaju sad sta mi tacno radimo sa njima uglavnom api sta radi je 
+
+input -> neka komputacija -> output 
+
+Ajde da nastavimo sa json primer za post metodu Client salje request koju bi mi morali komputaciju da napravimo
+
+Za django se koristi MVC system ili ti model view controller 
+
+Model je sta je u bazi podataka npr kao ACCOUNT 
+To je ko da pisemo sql ali u python 
+Koristimo nesto se zove ORM (OBJECT RATIONAL MAPPER)
+View ignorismo zato sto pravimo samo api ali mozes da ga  zamislis kao frontend
+
+Controller ti je kao nest izmedju clienta i baze podatka
+
+Npr request ide ovako u python 
+REQUEST -> CONTROLLER -> SERVICE ->REPOSITORY i posle se vraca REPOSITORY->SERVICE->CONTROLLER->Saljemo clinetu sta se to desilo
