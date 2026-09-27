@@ -44,7 +44,7 @@ PUT zamisli slican json samo sto npr salje novi password i njegov uuid
 
 Okej znamo sta je http i koje metode oni imaju sad sta mi tacno radimo sa njima uglavnom api sta radi je 
 
-input -> neka komputacija -> output 
+Request input -> neka komputacija -> output Sta vraca server 
 
 Ajde da nastavimo sa json primer za post metodu Client salje request koju bi mi morali komputaciju da napravimo
 
@@ -52,10 +52,15 @@ Za django se koristi MVC system ili ti model view controller
 
 Model je sta je u bazi podataka npr kao ACCOUNT 
 To je ko da pisemo sql ali u python 
-Koristimo nesto se zove ORM (OBJECT RATIONAL MAPPER)
+Koristimo nesto se zove ORM (OBJECT RATIONAL MAPPER) 
 View ignorismo zato sto pravimo samo api ali mozes da ga  zamislis kao frontend
 
 Controller ti je kao nest izmedju clienta i baze podatka
 
 Npr request ide ovako u python 
-REQUEST -> CONTROLLER -> SERVICE ->REPOSITORY i posle se vraca REPOSITORY->SERVICE->CONTROLLER->Saljemo clinetu sta se to desilo
+REQUEST -> CONTROLLER -> SERVICE ->REPOSITORY i posle se vraca REPOSITORY->SERVICE->CONTROLLER->Saljemo clinetu sta se to desilo vrv json.
+
+
+U DJANGO 
+
+models.py -> view.py -> url.py -> 
