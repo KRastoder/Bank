@@ -22,4 +22,5 @@ from bank import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/user/", views.api_user, name="api_user"),
+    path('api/account/',views.api_Account,name = 'api_Account')
 ]
